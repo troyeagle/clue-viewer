@@ -1,0 +1,141 @@
+.start-menu {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.start-menu-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.start-menu-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.start-menu-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.menu-item.selected {
+  transform: scale(0.98);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.menu-item-content {
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-item-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.menu-item-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.menu-item-arrow {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #667eea;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item-arrow {
+  transform: translateY(-50%) translateX(5px);
+}
+
+.start-menu-footer {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .start-menu-title {
+    font-size: 2.5rem;
+  }
+  
+  .menu-item-content {
+    padding: 25px 20px;
+  }
+  
+  .menu-item-title {
+    font-size: 1.5rem;
+  }
+  
+  .menu-item-arrow {
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-menu {
+    padding: 15px;
+  }
+  
+  .start-menu-title {
+    font-size: 2rem;
+  }
+  
+  .menu-item-content {
+    padding: 20px 15px;
+  }
+  
+  .menu-item-title {
+    font-size: 1.3rem;
+  }
+  
+  .menu-item-description {
+    font-size: 0.9rem;
+  }
+}

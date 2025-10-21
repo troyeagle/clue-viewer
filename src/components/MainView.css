@@ -1,0 +1,123 @@
+.main-view {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.main-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-to-menu-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-to-menu-btn:hover {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.main-view-title {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+.main-image-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hotspot {
+  cursor: pointer;
+  background: rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(102, 126, 234, 0.6);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.hotspot:hover {
+  background: rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.8);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.main-view-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-view {
+    padding: 15px;
+  }
+  
+  .main-view-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .main-view-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .back-to-menu-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-view {
+    padding: 10px;
+  }
+  
+  .main-view-title {
+    font-size: 1.3rem;
+  }
+  
+  .back-to-menu-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
