@@ -2,6 +2,7 @@ import { useState } from 'react'
 import StartMenu from './components/StartMenu'
 import MainView from './components/MainView'
 import Carousel from './components/Carousel'
+import SearchClues from './components/SearchClues'
 import './App.css'
 
 function App() {
@@ -40,10 +41,19 @@ function App() {
     setSelectedConfig(null)
   }
 
+  const handleSearchResult = (config, imageIndex) => {
+    setSelectedConfig(config)
+    setCurrentImageIndex(imageIndex)
+    setCurrentView('carousel')
+  }
+
   return (
     <div className="app">
       {currentView === 'menu' && (
-        <StartMenu onSelectClue={handleSelectClue} />
+        <div className="menu-with-search">
+          <SearchClues onSearchResult={handleSearchResult} />
+          <StartMenu onSelectClue={handleSelectClue} />
+        </div>
       )}
 
       {currentView === 'main' && selectedConfig && (
