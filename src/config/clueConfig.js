@@ -94,10 +94,49 @@ export const secondRoundConfig = {
   ]
 };
 
+// 个人线索配置
+export const personalCluesConfig = {
+  id: 'personal-clues',
+  title: '个人线索查看器',
+  basePath: '/clues/personal/',
+  directToCarousel: true, // 直接打开轮播组件
+  clueImages: [
+    { id: 1, title: '何家明', filename: '何家明.jpg' },
+    { id: 2, title: '尹', filename: '尹.jpg' },
+    { id: 3, title: '张雪', filename: '张雪.jpg' },
+    { id: 4, title: '方志远', filename: '方志远.jpg' },
+    { id: 5, title: '沈', filename: '沈.jpg' },
+    { id: 6, title: '王霞', filename: '王霞.jpg' },
+    { id: 7, title: '肖', filename: '肖.jpg' },
+    { id: 8, title: '薛', filename: '薛.jpg' }
+  ]
+};
+
+// 深入线索配置
+export const deepCluesConfig = {
+  id: 'deep-clues',
+  title: '深入线索查看器',
+  basePath: '/clues/deep/',
+  directToCarousel: true, // 直接打开轮播组件
+  clueImages: [
+    { id: 1, title: '儿童画1', filename: '儿童画1.jpeg' },
+    { id: 2, title: '儿童画2', filename: '儿童画2.jpeg' },
+    { id: 3, title: '儿童画3', filename: '儿童画3.jpeg' },
+    { id: 4, title: '儿童画4', filename: '儿童画4.jpeg' },
+    { id: 5, title: '第三轮-任的日记', filename: '第三轮-任的日记.jpg' },
+    { id: 6, title: '第三轮-泛黄的信件', filename: '第三轮-泛黄的信件.jpg' },
+    { id: 7, title: '第三轮张雪办公室', filename: '第三轮张雪办公室.jpg' },
+    { id: 8, title: '第三轮歌词', filename: '第三轮歌词.jpg' },
+    { id: 9, title: '第二轮-泛黄的日记', filename: '第二轮-泛黄的日记.jpg' }
+  ]
+};
+
 // 所有线索配置的映射
 export const clueConfigs = {
   'first-round': firstRoundConfig,
-  'second-round': secondRoundConfig
+  'second-round': secondRoundConfig,
+  'personal-clues': personalCluesConfig,
+  'deep-clues': deepCluesConfig
 };
 
 // 菜单配置
@@ -113,5 +152,17 @@ export const menuItems = [
     title: '第二轮线索',
     description: '查看第二轮线索集合',
     config: secondRoundConfig
+  },
+  {
+    id: 'personal-clues',
+    title: '个人线索',
+    description: '查看个人相关线索',
+    config: personalCluesConfig
+  },
+  {
+    id: 'deep-clues',
+    title: '深入线索',
+    description: '查看深入调查线索',
+    config: deepCluesConfig
   }
 ];

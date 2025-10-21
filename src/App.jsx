@@ -11,7 +11,13 @@ function App() {
 
   const handleSelectClue = (config) => {
     setSelectedConfig(config)
-    setCurrentView('main')
+    // 根据配置决定是否直接打开轮播组件
+    if (config.directToCarousel) {
+      setCurrentImageIndex(0)
+      setCurrentView('carousel')
+    } else {
+      setCurrentView('main')
+    }
   }
 
   const handleHotspotClick = (hotspotId) => {
@@ -20,7 +26,13 @@ function App() {
   }
 
   const handleBackToMain = () => {
-    setCurrentView('main')
+    // 如果配置为直接打开轮播组件，返回菜单；否则返回主视图
+    if (selectedConfig && selectedConfig.directToCarousel) {
+      setCurrentView('menu')
+      setSelectedConfig(null)
+    } else {
+      setCurrentView('main')
+    }
   }
 
   const handleBackToMenu = () => {
