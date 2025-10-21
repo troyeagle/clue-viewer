@@ -4,6 +4,7 @@ import './MainView.css'
 function MainView({ config, onHotspotClick, onBackToMenu }) {
   const [hotspots, setHotspots] = useState([])
   const [imageRect, setImageRect] = useState({ left: 0, top: 0, width: 0, height: 0 })
+  const [hideClues, setHideClues] = useState(false)
   const imageRef = useRef(null)
 
   // 计算图片实际位置和尺寸
@@ -68,6 +69,18 @@ function MainView({ config, onHotspotClick, onBackToMenu }) {
           ← 返回菜单
         </button>
         <h1 className="main-view-title">{config.title}</h1>
+        <div className="clue-toggle">
+          <label className="toggle-label">
+            <input 
+              type="checkbox" 
+              checked={hideClues} 
+              onChange={(e) => setHideClues(e.target.checked)}
+              className="toggle-checkbox"
+            />
+            <span className="toggle-slider"></span>
+            <span className="toggle-text">{hideClues ? '显示线索' : '隐藏线索'}</span>
+          </label>
+        </div>
       </div>
 
       <div className="main-image-container">
@@ -80,7 +93,7 @@ function MainView({ config, onHotspotClick, onBackToMenu }) {
         {hotspots.map((hotspot) => (
           <div
             key={hotspot.id}
-            className="hotspot"
+            className={`hotspot ${hideClues ? 'hotspot-hidden' : ''}`}
             style={{
               left: imageRect.left + (imageRect.width * hotspot.x / 100),
               top: imageRect.top + (imageRect.height * hotspot.y / 100),
