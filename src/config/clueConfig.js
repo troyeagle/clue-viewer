@@ -172,7 +172,9 @@ export const deepCluesConfig = {
     { id: 6, title: '第三轮-泛黄的信件', filename: '第三轮-泛黄的信件.jpg' },
     { id: 7, title: '第三轮张雪办公室', filename: '第三轮张雪办公室.jpg' },
     { id: 8, title: '第三轮歌词', filename: '第三轮歌词.jpg' },
-    { id: 9, title: '第二轮-泛黄的日记', filename: '第二轮-泛黄的日记.jpg' }
+    { id: 9, title: '第二轮-泛黄的日记', filename: '第二轮-泛黄的日记.jpg' },
+    { id: 10, title: '扶车线索', filename: '扶车线索.jpg' },
+    { id: 11, title: '扶车线索-何办公室', filename: '扶车线索-何办公室.jpg' }
   ]
 };
 
