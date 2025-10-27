@@ -127,6 +127,24 @@ export const wangxiaMemoriesConfig = {
   ]
 };
 
+// 结局配置
+export const endingsConfig = {
+  id: 'endings',
+  title: '角色结局',
+  basePath: '/memories/结局/',
+  directToCarousel: true,
+  clueImages: [
+    { id: 1, title: '何家明结局', filename: '【结局】何家明.jpeg' },
+    { id: 2, title: '尹海晴结局', filename: '【结局】尹海晴.jpeg' },
+    { id: 3, title: '张雪结局', filename: '【结局】张雪.jpeg' },
+    { id: 4, title: '方志远结局', filename: '【结局】方志远.jpeg' },
+    { id: 5, title: '沈向军结局', filename: '【结局】沈向军.jpeg' },
+    { id: 6, title: '王霞结局', filename: '【结局】王霞.jpeg' },
+    { id: 7, title: '肖建国结局', filename: '【结局】肖建国.jpeg' },
+    { id: 8, title: '薛宇结局', filename: '【结局】薛宇.jpeg' }
+  ]
+};
+
 // 记忆配置映射
 export const memorieConfigs = {
   'he-memories': heMemoriesConfig,
@@ -136,7 +154,8 @@ export const memorieConfigs = {
   'xiao-memories': xiaoMemoriesConfig,
   'xue-memories': xueMemoriesConfig,
   'zhangxue-memories': zhangxueMemoriesConfig,
-  'wangxia-memories': wangxiaMemoriesConfig
+  'wangxia-memories': wangxiaMemoriesConfig,
+  'endings': endingsConfig
 };
 
 // 搜索关键词映射（用于搜索功能）
@@ -158,5 +177,14 @@ export const memorySearchKeywords = {
   '雪': 'zhangxue-memories',
   '王霞': 'wangxia-memories',
   '霞': 'wangxia-memories',
-  '记忆': ['he-memories', 'yin-memories', 'fang-memories', 'shen-memories', 'xiao-memories', 'xue-memories', 'zhangxue-memories', 'wangxia-memories']
+  '结局': 'endings',
+  '何家明结局': 'endings',
+  '尹海晴结局': 'endings',
+  '张雪结局': 'endings',
+  '方志远结局': 'endings',
+  '沈向军结局': 'endings',
+  '王霞结局': 'endings',
+  '肖建国结局': 'endings',
+  '薛宇结局': 'endings',
+  '记忆': ['he-memories', 'yin-memories', 'fang-memories', 'shen-memories', 'xiao-memories', 'xue-memories', 'zhangxue-memories', 'wangxia-memories', 'endings']
 };
